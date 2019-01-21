@@ -57,6 +57,9 @@ The following options are supported:
 | app | a | Optional | Executes the specified shell command before running tests. Use it to launch or deploy the application you are going to test. | null |
 | appInitDelay | N.A. | Optional | Specifies the time (in milliseconds) allowed for an application launched using the --app option to initialize. | 0 |
 | tags | t | Optional | Run only tests having the specified tags | [] |
+| screenshots | N.A. | Optional | Enables screenshots and specifies the base directory where they are saved. | '' |
+| screenshotPathPattern | N.A. | Optional | Specifies a custom pattern to compose screenshot files' relative path and name. | '' |
+| screenshotsOnFails | N.A. | Optional | Takes a screenshot whenever a test fails. | false |
 
 ## Programming interface
 

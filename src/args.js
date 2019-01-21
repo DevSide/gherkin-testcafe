@@ -108,4 +108,19 @@ module.exports = require('yargs')
     default: [],
     describe: 'Run only tests having the specified tags',
     type: 'array'
+  })
+  .option('screenshots', {
+    default: '',
+    describe: 'Enables screenshots and specifies the base directory where they are saved.',
+    type: 'string'
+  })
+  .option('screenshotPathPattern', {
+    default: '',
+    describe: 'Specifies a custom pattern to compose screenshot files\' relative path and name.',
+    type: 'string'
+  })
+  .option('screenshotsOnFails', {
+    default: false,
+    describe: 'Takes a screenshot whenever a test fails. Screenshots are saved to the directory specified in the -screenshots <path> option.',
+    type: 'boolean'
   });

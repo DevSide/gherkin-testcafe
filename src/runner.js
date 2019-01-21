@@ -20,7 +20,10 @@ module.exports = async ({
   concurrency,
   app,
   appInitDelay,
-  tags
+  tags,
+  screenshots,
+  screenshotPathPattern,
+  screenshotsOnFails
 }) => {
   const testcafe = await createTestCafe(hostname, ...ports.slice(0, 2));
   const runner = testcafe.createRunner();
@@ -44,7 +47,10 @@ module.exports = async ({
         selectorTimeout,
         assertionTimeout,
         pageLoadTimeout,
-        speed
+        speed,
+        screenshots,
+        screenshotPathPattern,
+        screenshotsOnFails
       });
 
     process.exit(failedCount && 1);
